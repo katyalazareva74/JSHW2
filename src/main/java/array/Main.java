@@ -2,6 +2,7 @@ package array;
 
 import array.Array;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -23,6 +24,9 @@ public class Main {
             System.out.printf("Разница между максимальным значением элемента в массиве и минимальным: %d\n", difference);
             boolean zero = Arraytasks.zeroValues(array);
             System.out.println("Два соседних элемента в массиве имеют нулевые значения: " + zero);
+        }
+        catch (InputMismatchException e){
+            System.out.println("Правильно вводите размер массива!");
         }
     }
 }
